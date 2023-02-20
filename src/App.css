@@ -1,38 +1,321 @@
 .App {
+  font-size: 16px;
+  font-family: "Noto Serif JP", serif;
+}
+.body {
+  background-color: #000  ;
+}
+/* container */
+.container {
+  max-width: 1170px;
+}
+
+/* ------------------
+header
+--------------------*/
+.header {
+  height: 94px;
+  color: white;
+}
+.header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header nav ul li {
+  margin-right: 15px;
+  list-style: none;
+  width: 183px;
+  line-height: 94px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header a{
+  text-decoration: none;
+  color:white ;
+}
+.header a:hover{
+  color:#FAFE7F;
+  text-shadow: 0 -5px 10px #FAFE7F;
+  text-decoration: none;
+}
+.header a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #FAFE7F;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+.header a:hover::after {
+  transform: scale(1, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ------------------
+footer
+--------------------*/
+footer {
+  height: 48px;
+}
+.footer-p {
+  color:#737373;
+  text-align: center;
+  line-height: 48px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ------------------
+Home
+--------------------*/
+.home {
+  position: relative;
+}
+.img-home {
+  width: 90%;
+  height: calc(100vh - 94px);
+  margin: 0 auto;
+  display: block;
+  filter: grayscale(100%);
+}
+.h1-home {
+  position: absolute;
+  top:100px;
+  left: 100px;
+  font-size: 70px;
+  color: #2C2C2C;
+}
+.span-home{
+  display:inline-block;
+  margin-bottom: 2rem;
+}
+
+/* ------------------
+Profile
+--------------------*/
+.profile {
+  background-image: url(./img/profile.jpeg);
+  border-radius: 5px;
+  width: 650px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+.p-h1 {
+  padding-top: 56px;
+  font-size: 30px;
+}
+.p-dl {
+  margin-top: 64px;
+  padding:0 32px 64px 32px;
+}
+.p-dt {
+  margin-bottom: 16px;
+  color: #B7B7B2;
+}
+.p-dd {
+  margin-bottom: 32px;
+}
+
+/* ------------------
+About
+--------------------*/
+.about  {
+  color: white;
+}
+.block {
+  margin-bottom: 64px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.block:nth-child(2n+1) {
+  flex-direction: row-reverse;
+}
+.title {
+  text-align: center;
+  margin-bottom:64px ;
+  font-size: 32px;
+  color: white;
+}
+.about-h2 {
+  font-size: 32px;
+  color: #FAFE7F;
+  text-align: center;
+  /* word-wrap: break-word; */
+}
+.about-p {
+  color: #808080;
+}
+.content {
+  background-color: #161514;
+  border-radius: 5px;
+}
+/* ------------------
+Skill
+--------------------*/
+.skill {
+  color: white;
+}
+.skill-li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.skii-h2 {
+  font-size: 24px;
+  color: #FAFE7F;
+  margin-bottom: 32px;
+}
+.skill-img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 32px;
+}
+.skill-p {
+  color: #E0C563;
+}
+
+/* ------------------
+Contact
+--------------------*/
+.contact-ul {
+  width: 75%;
+  margin: 0 auto;
+}
+.contact-li {
+  text-align: center;
+  width: 100px;
+  margin-bottom: 80px;
+}
+.contact-img {
+  width: 100px;
+}
+.contact-p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* レスポンシブ */
+@media (min-width: 992px) {
+  .h1-home {
+    font-size: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .h1-home {
+    font-size: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .h1-home {
+    font-size: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .h1-home {
+    font-size: 30px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
 }
